@@ -80,7 +80,7 @@ namespace blockytalky {
         const buf = pins.createBuffer(value.length + 1);
         for (let i = 0; i < value.length; ++i)
             buf[i] = value.charCodeAt(i);
-        buf[value.length + 1] = 0;
+        buf[value.length] = 0;
         blockytalky.sendMessage(key, BlockyTalkyMessageType.StringType, buf);
     }
 
